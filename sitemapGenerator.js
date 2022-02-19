@@ -10,11 +10,13 @@ const sitemapGenerator = (data, prevUrl = "") =>
         const json = { id, title, url }
 
         return children ?
-            { ...json, children: { ...sitemapGenerator(children, url) } } :
+            { ...json, children:  [...sitemapGenerator(children, url)]  } :
             json
     })
 
 
 
-console.log(sitemapGenerator(siteMapArr))
+console.dir(sitemapGenerator(siteMapArr))
+
+
 // id,title,url و children
