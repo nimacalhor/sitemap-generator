@@ -1,6 +1,7 @@
 
 # Description
 
+simple function for making sitemap json
 
 ```bash
   [
